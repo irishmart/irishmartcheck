@@ -1,3 +1,3 @@
-web: gunicorn ireshcart.wsgi:application --log-file - --log-level debug
+gunicorn app:application --preload -b 0.0.0.0:8000
 python manage.py collectstatic --noinput
 manage.py migrate
