@@ -10,11 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import Path
 import os
+from pathlib import Path
 from re import TEMPLATE
+
 import django_heruku
-import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,6 +29,8 @@ SECRET_KEY = 'django-insecure-=yq&ilwq(8oe0!&v00e%+5^rtrr!daoe1@-fwu&c@)jko_8=82
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+os.environ["DJANGO_SETTINGS_MODULE"] = "mysite.settings" 
 
 ALLOWED_HOSTS = ["*","https://804d-202-21-45-120.in.ngrok.io/"]
 
