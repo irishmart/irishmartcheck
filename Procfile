@@ -1,1 +1,1 @@
-web: gunicorn ireshcart.wsgi --log-file -
+web: gunicorn ireshcart.wsgi
